@@ -21,14 +21,38 @@ page-home {
 	width: 100px;
 	height: 50px;
 	float:right;
+	margin-right: 25px;
+	margin-top: 20px;
+
 	}
 
 	.button1 {
 
-	float:center;
-    width:80%;
-    text-align: center;
+     text-align: center;
+     margin-left: 20px; 
+     margin-right: 20px;
+     height: 70px;
+     width: 200px;
+     font-size: 50px;
     
+	}
+
+	.button2 {
+
+     text-align: center;
+     margin-left: 20px; 
+     margin-top: 80px;
+     width: 100%;
+    
+	}
+
+	.edittext1 {
+
+	 margin-left: 25px; 
+     margin-top: 20px;
+     margin-right: 20px;
+     width: 96%;
+
 	}
 
 }
