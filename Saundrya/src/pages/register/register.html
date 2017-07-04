@@ -15,30 +15,33 @@
 
 <ion-content padding class="master">
 
+<form [formGroup]="registrationForm">
 
 <ion-item class = "edittext1">
-    <ion-label color="primary" floating>Name</ion-label>
-    <ion-input></ion-input>
+    <ion-label color="primary" for="email" floating>Name</ion-label>
+    <ion-input formControlName="name" id="name"></ion-input>
+    
+    
   </ion-item>
 
   <ion-item class = "edittext1">
     <ion-label color="primary" floating>Email</ion-label>
-    <ion-input></ion-input>
+    <ion-input formControlName="email" id="email"></ion-input>
   </ion-item>
 
   <ion-item class = "edittext1">
     <ion-label color="primary" floating>Password</ion-label>
-    <ion-input></ion-input>
+    <ion-input formControlName="password" id="password"></ion-input>
   </ion-item>
 
   <ion-item class = "edittext1">
     <ion-label color="primary" floating>Mobile No.</ion-label>
-    <ion-input></ion-input>
+    <ion-input formControlName="mobile" id="mobile"></ion-input>
   </ion-item>
 
   <ion-item class = "edittext1">
     <ion-label color="primary" floating>Street</ion-label>
-    <ion-input></ion-input>
+    <ion-input formControlName="street" id="street"></ion-input>
   </ion-item>
 
   
@@ -48,7 +51,7 @@
 
   <ion-item class="master">
     <ion-label color="primary" floating>City</ion-label>
-    <ion-input></ion-input>
+    <ion-input formControlName="city" id="city"></ion-input>
   </ion-item>
   </ion-col>
 
@@ -56,7 +59,7 @@
 
   <ion-item class="master">
     <ion-label color="primary" floating>Zip Code</ion-label>
-    <ion-input></ion-input>
+    <ion-input formControlName="zip" id="zip"></ion-input>
   </ion-item>
 
   
@@ -65,13 +68,20 @@
 
   <ion-item class = "edittext1">
     <ion-label color="primary" floating>State</ion-label>
-    <ion-input type="text" name="state"></ion-input>
+    <ion-input formControlName="state" id="state"></ion-input>
   </ion-item>
 
   <ion-row>
   <ion-col class="button1">
 
-  <button ion-button large full>Register</button>
+  <button ion-button large full [disabled]="!registrationForm.valid">Register</button>
   </ion-col>
   </ion-row>
+	
+
+
+</form>
+
+
+
 </ion-content>

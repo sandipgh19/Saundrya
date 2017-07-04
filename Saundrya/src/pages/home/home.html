@@ -27,16 +27,18 @@
 
   <ion-title text-wrap class="view1">OR</ion-title>
 
-
- <ion-item class="edittext1">
+  <form [formGroup]="loginForm">
+    
+    <ion-item class="edittext1">
     <ion-label floating>User Name</ion-label>
-    <ion-input></ion-input>
+    <ion-input formControlName="email" id="email"></ion-input>
   </ion-item>
 
 <ion-item class="edittext1">
     <ion-label floating>Password</ion-label>
-    <ion-input></ion-input>
+    <ion-input formControlName="password" id="password"></ion-input>
   </ion-item>
+
 
 
 <ion-row>
@@ -47,14 +49,12 @@
 </ion-col>
 </ion-row>
 
-
-
-
-
   <ion-row>
   <ion-col class="button1">
 
-  <button ion-button large full>Log In</button>
+  <button ion-button large full [disabled]="!loginForm.valid">Log In</button>
   </ion-col>
   </ion-row>
+
+  </form>
 </ion-content>
