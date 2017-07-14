@@ -26,6 +26,11 @@ export class HomePage {
 
   registerPage() {
 
+  let email=this.email
+
+
+  console.log(email)
+
   this.navCtrl.push(Register)
   }
 
