@@ -4,6 +4,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+import { Service } from '../pages/service/service';
+import { Profile } from '../pages/profile/profile';
 @Component({
   templateUrl: 'app.html'
 })
@@ -17,6 +19,14 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
+  }
+
+  go_to_service() {
+    this.nav.setRoot(Service);
+  }
+
+  go_to_profile() {
+    this.nav.setRoot(Profile);
   }
 }
 
