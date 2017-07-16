@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Http, Headers, RequestOptions } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 
 /**

@@ -42,7 +42,7 @@
 
 <ion-item class="edittext1">
     <ion-label floating>Password</ion-label>
-    <ion-input formControlName="password" id="password"></ion-input>
+    <ion-input formControlName="password" [(ngModel)]="password" id="password"></ion-input>
   </ion-item>
 
 
@@ -58,7 +58,7 @@
   <ion-row>
   <ion-col class="button1">
 
-  <button ion-button large full [disabled]="!loginForm.valid">Log In</button>
+  <button ion-button large full (click)="login()" [disabled]="!loginForm.valid">Log In</button>
   </ion-col>
   </ion-row>
 
