@@ -11,6 +11,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class HomePage {
 
 	public loginForm:any;
+  email: any;
 
   constructor(public navCtrl: NavController, public _form:FormBuilder, public menu: MenuController) {
 
