@@ -19,29 +19,29 @@
 
 <ion-item class = "edittext1">
     <ion-label color="primary" for="email" floating>Name</ion-label>
-    <ion-input formControlName="name" id="name"></ion-input>
+    <ion-input formControlName="name" id="name" [(ngModel)]="name"></ion-input>
     
     
   </ion-item>
 
   <ion-item class = "edittext1">
     <ion-label color="primary" floating>Email</ion-label>
-    <ion-input formControlName="email" id="email"></ion-input>
+    <ion-input formControlName="email" id="email" [(ngModel)]="email"></ion-input>
   </ion-item>
 
   <ion-item class = "edittext1">
     <ion-label color="primary" floating>Password</ion-label>
-    <ion-input formControlName="password" id="password"></ion-input>
+    <ion-input formControlName="password" id="password" [(ngModel)]="password"></ion-input>
   </ion-item>
 
   <ion-item class = "edittext1">
     <ion-label color="primary" floating>Mobile No.</ion-label>
-    <ion-input formControlName="mobile" id="mobile"></ion-input>
+    <ion-input formControlName="mobile" [(ngModel)]="mobile" id="mobile"></ion-input>
   </ion-item>
 
   <ion-item class = "edittext1">
     <ion-label color="primary" floating>Street</ion-label>
-    <ion-input formControlName="street" id="street"></ion-input>
+    <ion-input formControlName="street" [(ngModel)]="street" id="street"></ion-input>
   </ion-item>
 
   
@@ -51,7 +51,7 @@
 
   <ion-item class="master">
     <ion-label color="primary" floating>City</ion-label>
-    <ion-input formControlName="city" id="city"></ion-input>
+    <ion-input formControlName="city" [(ngModel)]="city" id="city"></ion-input>
   </ion-item>
   </ion-col>
 
@@ -59,7 +59,7 @@
 
   <ion-item class="master">
     <ion-label color="primary" floating>Zip Code</ion-label>
-    <ion-input formControlName="zip" id="zip"></ion-input>
+    <ion-input formControlName="zip" [(ngModel)]="zip" id="zip"></ion-input>
   </ion-item>
 
   
@@ -68,13 +68,13 @@
 
   <ion-item class = "edittext1">
     <ion-label color="primary" floating>State</ion-label>
-    <ion-input formControlName="state" id="state"></ion-input>
+    <ion-input formControlName="state" [(ngModel)]="state" id="state"></ion-input>
   </ion-item>
 
   <ion-row>
   <ion-col class="button1">
 
-  <button ion-button large full [disabled]="!registrationForm.valid">Register</button>
+  <button ion-button large full (click)="register()" [disabled]="!registrationForm.valid">Register</button>
   </ion-col>
   </ion-row>
 	
